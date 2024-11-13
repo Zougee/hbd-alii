@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun, Ali!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2d9e6;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+            animation: slideIn 1s ease-out;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #ff69b4;
+            margin-bottom: 20px;
+            font-weight: bold;
+            animation: bounce 1.5s ease infinite;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        /* Animasi confetti */
+        .confetti {
+            position: absolute;
+            top: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff69b4;
+            animation: confettiFall 2s infinite linear;
+        }
+
+        .confetti:nth-child(odd) {
+            background-color: #fdd835;
+        }
+
+        .confetti:nth-child(even) {
+            background-color: #00e676;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes confettiFall {
+            0% { transform: translateY(0) rotate(0); }
+            100% { transform: translateY(500px) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>HBD ALII!!! 😋😘🥰🥵🎉</h1>
+        <p>Semoga ali panjang umur, sehat selalu, berbakti ke orang tua, nikah ama caca ato wawa (YAHAHAHAHAHAH BIAR GW BISA MAKAN AYCE), dan apapun yg lu inginkan bakal terkabul aaminn (oiya ini gada apa apanya ama lu bgst jadi gausah banding bandingin)</p>
+    </div>
+
+    <script>
+     
+        for (let i = 0; i < 100; i++) {
+            let confetti = document.createElement("div");
+            confetti.className = "confetti";
+            confetti.style.left = Math.random() * 100 + "vw";
+            confetti.style.animationDuration = (Math.random() * 2 + 3) + "s";
+            document.body.appendChild(confetti);
+        }
+    </script>
+
+</body>
+</html>
